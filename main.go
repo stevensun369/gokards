@@ -6,6 +6,9 @@ import (
 
 	"github.com/stevensun369/kards/database"
 
+	// routes
+	"github.com/stevensun369/kards/auth"
+
 )
 
 func main () {
@@ -26,6 +29,7 @@ func main () {
 	})
 
 	//routes
+	auth.Routes(app)
 
 	app.Listen(":3000")
 

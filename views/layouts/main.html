@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    {% if Title %}
+        <title> kards - {{ Title }} </title>
+    {% else %}
+        <title>kards</title>
+    {% endif %}
+    
+</head>
+<body>
+
+    <script>
+        var viewport = document.querySelector("meta[name=viewport]");
+        viewport.setAttribute("content", viewport.content + ", height=" + innerHeight);
+    </script>
+
+    {{ embed }}
+    
+</body>
+</html>
