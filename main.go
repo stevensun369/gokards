@@ -9,6 +9,7 @@ import (
 )
 
 func main () {
+
 	engine := django.New("./views", ".html")
 
 	app := fiber.New(fiber.Config{
@@ -20,6 +21,12 @@ func main () {
 	// database initialization
 	database.InitDatabase()
 
-	
+	app.Get("/test", func (c * fiber.Ctx) error {
+		return c.SendString("Hello, world")
+	})
+
+	//routes
+
+	app.Listen(":3000")
 
 }
