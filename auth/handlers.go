@@ -84,7 +84,7 @@ func postLogin(c *fiber.Ctx) error {
 	email := c.FormValue("email")
 	password := c.FormValue("password")
 
-	// db connectio
+	// db connection
 	db := database.DBConn
 	var user models.User
 
