@@ -1,0 +1,93 @@
+body {
+    background: #fffcc0;
+    font-family: "Roboto", sans-serif;
+}
+
+:root {
+    --form-input-width: 30%;
+    --form-button-width: 10%;
+
+    --cara-red: #990000
+}
+
+@media only screen and (max-width: 600px) {
+    :root {
+        --form-input-width: 90%;
+        --form-button-width: 35%;
+    }
+}
+
+.logo {
+    width: 100%;
+    height: auto;
+
+    padding-top: 10vh;
+    padding-bottom: 5vh;
+
+    margin-top: 5vh;
+}
+
+.logo-text {
+    font-size: 4em;
+    font-family: "Mountains of Christmas", cursive;
+
+    text-align: center;
+}
+
+.form {
+
+    align-content: center;
+}
+
+.form-input {
+    width: var(--form-input-width);
+    height: 7vh;
+
+    margin-left: calc(calc(100% - var(--form-input-width)) / 2);
+
+    border: none;
+    outline: none;
+    border-radius: 0;
+
+    background: var(--cara-red);
+
+    padding-left: 2vh;
+
+    box-sizing: border-box;
+
+    color: white;
+}
+
+.form-input::placeholder {
+    color: white;
+    font-family: "Roboto", sans-serif;
+}
+
+.form-input-first {
+    border-top-left-radius: 3.5vh;
+    border-top-right-radius: 3.5vh;
+}
+
+.form-input-last {
+    border-bottom-left-radius: 3.5vh;
+    border-bottom-right-radius: 3.5vh;
+}
+
+.form-button {
+    background: #990000;
+
+    width: var(--form-button-width);
+    height: 7vh;
+
+    margin-left: calc(calc(100% - var(--form-button-width)) / 2);
+    margin-top: 5vh;
+
+    border: 0;
+    outline: none;
+
+    color: white;
+
+    border-radius: 300px;
+
+    font-family: "Roboto", sans-serif;
+}

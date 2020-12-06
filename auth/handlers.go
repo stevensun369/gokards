@@ -17,24 +17,17 @@ import(
 // Register handlers
 func getRegister(c *fiber.Ctx) error {
 
+	password := c.Query("password")
+	email := c.Query("email")
 
 	return c.Render("auth/register", fiber.Map{
 		"Title": "Înregistrare",
+		"password": password,
+		"email": email,
 	}, "layouts/main")
 }
 
 func postRegister(c *fiber.Ctx) error {
-
-	// msg system
-	var msgQuery string = "?";
-
-	// --- password and password confirm verification
-	password := c.FormValue("password")
-	passwordConfirm := c.FormValue("password_confirm")
-
-	if password != passwordConfirm {
-		msgQuery += "password=no&"
-	}
 
 	//  --- email verification
 	email := c.FormValue("email")
@@ -43,14 +36,18 @@ func postRegister(c *fiber.Ctx) error {
 	db := database.DBConn
 	var checkUser models.User
 
+	// --- email
 	emailError := db.Where("email = ?", email).First(&checkUser).Error
 	if emailError == nil {
-		msgQuery += "email=no"
-	} else if emailError != nil {
+		return c.Redirect("/auth/register?email=no")
 	}
-	
-	if msgQuery != "?" {
-		return c.Redirect("/auth/register" + msgQuery)
+
+	// --- password and password confirm verification
+	password := c.FormValue("password")
+	passwordConfirm := c.FormValue("password_confirm")
+
+	if password != passwordConfirm {
+		return c.Redirect("/auth/register?password=no")
 	}
 
 	// --- password hashing
@@ -75,8 +72,14 @@ func postRegister(c *fiber.Ctx) error {
 
 // Login handlers
 func getLogin(c *fiber.Ctx) error {
+
+	user := c.Query("user")
+	password := c.Query("password")
+
 	return c.Render("auth/login", fiber.Map{
 		"Title": "Conectare",
+		"user": user,
+		"password": password,
 	}, "layouts/main")
 }
 
@@ -111,7 +114,7 @@ func postLogin(c *fiber.Ctx) error {
 		Expires: time.Now().Add(720 * time.Hour),
 	})
 
-	return c.Redirect("/auth/register")
+	return c.Redirect("/test")
 }
 
 // Logout handler

@@ -1,10 +1,28 @@
-<form method="post">
-    
-    <input type="email" name="email" placeholder="Email"><br>
-    <input type="password" name="password" placeholder="Parolă"><br>
-    
+<link rel="stylesheet" href="/static/css/auth.css">
+<link rel="stylesheet" href="/static/css/msg.css">
 
-    <button type="submit">
-        Logare
+
+<div class="logo">
+    <p class="logo-text">kards</p>
+</div>
+
+<form method="post" class="form">
+
+    {% if user == "no" %}
+        <div class="msg-error">
+            Utilizatorul cu acest email nu există.
+        </div>
+    {% elif password == "no" %}
+        <div class="msg-error">
+            Parola introdusă nu este corectă.
+        </div>
+    {% endif %}
+    
+    <input type="email" name="email" placeholder="Email" class="form-input form-input-first"><br>
+    <input type="password" name="password" placeholder="Parolă" class="form-input form-input-last"><br>
+
+    <button type="submit" class="form-button">
+        Conectare
     </button>
+
 </form>

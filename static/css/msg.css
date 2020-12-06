@@ -1,0 +1,22 @@
+.msg-error {
+    width: var(--form-input-width);
+
+    box-sizing: border-box;
+
+    padding: 3vh;
+    padding-top: 2vh;
+    padding-bottom: 2vh;
+    
+    margin-left: calc(calc(100% - var(--form-input-width)) / 2);
+    margin-bottom: 1vh;
+
+    border-radius: 300px;
+
+    border: 2px solid var(--cara-red);
+
+    color: var(--cara-red);
+    font-weight: 600;
+    text-align: justify;
+    font-size: 0.95em;
+
+}

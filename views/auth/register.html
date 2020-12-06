@@ -1,11 +1,31 @@
-<form method="post">
-    <input type="text" name="nume" placeholder="Nume"><br>
-    <input type="text" name="prenume" placeholder="Prenume"><br>
-    <input type="email" name="email" placeholder="Email"><br>
-    <input type="password" name="password" placeholder="Parolă"><br>
-    <input type="password" name="password_confirm" placeholder="Confirmare Parolă"><br>
+<link rel="stylesheet" href="/static/css/auth.css">
+<link rel="stylesheet" href="/static/css/msg.css">
 
-    <button type="submit">
-        Submit
+
+<div class="logo">
+    <p class="logo-text">kards</p>
+</div>
+
+<form method="post" class="form">
+
+    {% if email == "no" %}
+        <div class="msg-error">
+            Email-ul introdus de dumneavoastră a fost folosit deja.
+        </div>
+    {% elif password == "no" %}
+        <div class="msg-error">
+            Cele două parole introduse nu corespund.
+        </div>
+    {% endif %}
+
+    <input type="text" name="nume" placeholder="Nume" class="form-input form-input-first"><br>
+    <input type="text" name="prenume" placeholder="Prenume" class="form-input"><br>
+    <input type="email" name="email" placeholder="Email" class="form-input"><br>
+    <input type="password" name="password" placeholder="Parolă" class="form-input"><br>
+    <input type="password" name="password_confirm" placeholder="Confirmare Parolă" class="form-input form-input-last"><br>
+
+    <button type="submit" class="form-button">
+        Înregistrare
     </button>
+
 </form>
