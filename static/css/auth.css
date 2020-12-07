@@ -4,13 +4,13 @@ body {
 }
 
 :root {
-    --form-input-width: 30%;
+    --form-input-width: 40%;
     --form-button-width: 10%;
 
     --cara-red: #990000
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 800px) {
     :root {
         --form-input-width: 90%;
         --form-button-width: 35%;
@@ -90,4 +90,25 @@ body {
     border-radius: 300px;
 
     font-family: "Roboto", sans-serif;
+
+    float: left;
+}
+
+.interauth-link-container {
+    text-align: center;
+
+    box-sizing: border-box;
+    padding: 2vh;
+}
+
+.interauth-link-sizing {
+    width: var(--form-input-width);
+    
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.interauth-link {
+    width: 2vh;
+    color: #0645AD;
 }
