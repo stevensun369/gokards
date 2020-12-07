@@ -8,6 +8,8 @@ import (
 
 	// routes
 	"github.com/stevensun369/kards/auth"
+	"github.com/stevensun369/kards/application"
+
 
 )
 
@@ -24,12 +26,9 @@ func main () {
 	// database initialization
 	database.InitDatabase()
 
-	app.Get("/test", func (c * fiber.Ctx) error {
-		return c.SendString("Hello, world")
-	})
-
 	//routes
 	auth.Routes(app)
+	application.Routes(app)
 
 	app.Listen(":3000")
 

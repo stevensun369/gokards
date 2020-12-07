@@ -28,6 +28,7 @@ func InitDatabase() {
 
 	DBConn.AutoMigrate(
 		&models.User{},
+		&models.Kard{},
 	)
 
 	log.Println("AutoMigrated the models")
