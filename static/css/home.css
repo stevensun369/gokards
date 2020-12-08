@@ -15,20 +15,35 @@ body {
     font-family: "Roboto", sans-serif;
 }
 
+a {
+    color:  #fffcc0;
+}
+
 header {
-    width: 100%;
+    width: 96%;
     height: var(--header-height);
 
     background: var(--cara-red);
 
     position: fixed;
-    top: 0;
+    top: 1vh;
+    left: 2%;
+
+    border-radius: 26px;
 }
 
-.header-left-block {
+.header-sent-kard {
     width: calc(calc(100% - var(--header-width)) / 2);
     height: 100%;
     float: left;
+}
+
+.header-sent-kard-img {
+    height: 4.5vh;
+    margin-top: 1.75vh;
+    float: left;
+    margin-left: 4vw;
+
 }
 
 .logo {
@@ -39,8 +54,8 @@ header {
 }
 
 .logo-text {
-    font-size: 6vh;
-    margin-top: 1.25vh;
+    font-size: 5vh;
+    margin-top: 1.75vh;
     font-family: "Mountains of Christmas", cursive;
 
     text-align: center;
@@ -56,11 +71,77 @@ header {
     height: 4.5vh;
     margin-top: 1.75vh;
     float: right;
-    margin-right: 3vw;
+    margin-right: 4vw;
 
 }
 
 .space {
-    height: 10vh;
+    height: 8.5vh;
     width: 100%;
+}
+
+/* section */
+section {
+    width: 100%;
+    height: auto;
+
+    padding-top: 2vh;
+    padding-bottom: 2vh;
+
+    box-sizing: border-box;
+
+    margin-top: 0;
+
+    /* background: green; */
+}
+
+.kard {
+    background: rgba(221, 221, 221, 0.75);
+
+    width: 96%;
+
+    margin-left: 2%;
+
+    border-radius: 13px;
+
+    padding-top: 2.5vh;
+    padding-bottom: 1vh;
+    padding-left: 4vw;
+
+    display: inline-block;
+    box-sizing: border-box;
+
+}
+
+.kard-from {
+
+    font-size: 2.25vh;
+
+    height: 4vh;
+    width: 100%;
+
+    float: left;
+
+    box-sizing: border-box;
+
+    font-weight: 850;
+
+    color: var(--cara-red);
+
+    /* background: green; */
+}
+
+.kard-date {
+    font-size: 2.25vh;
+
+    height: 4vh;
+    width: 100%;
+
+    float: left;
+
+    box-sizing: border-box;
+
+    color: var(--cara-red);
+
+    /* background: blue; */
 }
