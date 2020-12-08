@@ -1,0 +1,66 @@
+:root {
+    --header-height: 8vh;
+    --header-width: 70%;
+
+    --cara-red: #990000;
+}
+/* 
+@media only screen and (max-width: 800px) {
+    :root {
+    }
+} */
+
+body {
+    background: #fffcc0;
+    font-family: "Roboto", sans-serif;
+}
+
+header {
+    width: 100%;
+    height: var(--header-height);
+
+    background: var(--cara-red);
+
+    position: fixed;
+    top: 0;
+}
+
+.header-left-block {
+    width: calc(calc(100% - var(--header-width)) / 2);
+    height: 100%;
+    float: left;
+}
+
+.logo {
+    width: var(--header-width);
+    height: 100%;
+
+    float: left;
+}
+
+.logo-text {
+    font-size: 6vh;
+    margin-top: 1.25vh;
+    font-family: "Mountains of Christmas", cursive;
+
+    text-align: center;
+}
+
+.header-add-kard {
+    width: calc(calc(100% - var(--header-width)) / 2);
+    height: 100%;
+    float: left;
+}
+
+.header-add-kard-img {
+    height: 4.5vh;
+    margin-top: 1.75vh;
+    float: right;
+    margin-right: 3vw;
+
+}
+
+.space {
+    height: 10vh;
+    width: 100%;
+}
