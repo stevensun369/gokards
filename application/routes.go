@@ -8,4 +8,8 @@ import (
 func Routes(app *fiber.App) {
 	app.Get("/home", getHome)
 	app.Get("", getHome)
+
+	app.Get("/sent", getSent)
+
+	app.Get("/add", getAdd)
 }

@@ -1,0 +1,11 @@
+.indicator {
+    font-family: "Roboto", sans-serif;
+    color: var(--cara-red);
+
+    box-sizing: border-box;
+    padding-left: 4%;
+    padding-right: 4%;
+    padding-bottom: 1vh;
+
+    font-weight: 850;
+}

@@ -38,6 +38,12 @@ header {
     float: left;
 }
 
+.header-left-placeholder {
+    width: calc(calc(100% - var(--header-width)) / 2);
+    height: 100%;
+    float: left;
+}
+
 .header-sent-kard-img {
     height: 4.5vh;
     margin-top: 1.75vh;
