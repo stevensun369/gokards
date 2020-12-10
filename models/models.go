@@ -25,5 +25,13 @@ type Kard struct {
 	To string `gorm:"index"`
 
 	Background string
+
+	Orientation string
+
+	Image string
+
 	Message string
+	Font string
+	Color string
+
 }
