@@ -29,6 +29,40 @@
 
 <section>
 
-    <form class="form" method="post"></form>
+    <form class="form" method="post">
+        <input type="text" name="to" class="form-to" placeholder="Destinatarul kard-ului">
+
+        <div class="form-spacer"></div>
+
+        <div class="indicator">Alegeti fundalul kard-ului:</div>
+
+        <div class="form-bgs">
+
+            <input type="radio" name="background" value="1" id="bg1">
+            <label class="form-bgs-card" for="bg1"></label>
+
+            <!-- <div class="form-bgs-spacer"></div> -->
+
+            <input type="radio" name="background" value="1" id="bg2">
+            <label class="form-bgs-card" for="bg2"></label>
+
+            <input type="radio" name="background" value="1" id="bg3">
+            <label class="form-bgs-card" for="bg3"></label>
+
+            <input type="radio" name="background" value="1" id="bg4">
+            <label class="form-bgs-card" for="bg4"></label>
+
+        </div>
+
+        <div class="form-spacer"></div>
+
+        <div class="indicator">Alegeti o imagine pentru kard:</div>
+        
+        <input type="file" id="image" class="form-file-input">
+        <label class="form-file" for="image">
+            Incarcati o imagine
+        </label>
+
+    </form>
 
 </section>

@@ -1,6 +1,150 @@
-.form {
-    background: green;
+:root {
+    --form-bgs-card-border-width: 0.5vw;
+    --form-bgs-card-size: 20.75vw;
+    --choose-file-button-width: 20%;
 
+}
+
+@media only screen and (max-width: 600px) {
+    :root {
+        --form-bgs-card-size: 29vw;
+        --choose-file-button-width: 50%;
+    }
+}
+
+.form {
     width: 100%;
     height: 10vh;
+}
+
+.form-spacer {
+    height: 3vh;
+    width: 100%;
+}
+
+.form-to {
+    width: 96%;
+    height: 8vh;
+
+    margin-left: 2%;
+
+    outline: none;
+    border: 0;
+
+    border-radius: 3.5vh;
+
+    background: var(--gray);
+
+    padding-left: 4vw;
+    box-sizing: border-box;
+
+    color: var(--cara-red);
+
+    font-size: 1.15em;
+}   
+
+.form-to::placeholder {
+    color: var(--cara-red);
+}
+
+.indicator {
+    width: 100%;
+    height: 2vh;
+
+    font-family: "Roboto", sans-serif;
+    color: var(--cara-red);
+    font-weight: 850;
+    
+    box-sizing: border-box;
+    padding-left: 4%;
+    padding-bottom: 4vh;
+
+}
+
+/* form backgrounds */
+.form-bgs {
+    width: 100%;
+
+    box-sizing: border-box;
+    padding-left: 2%;
+
+    display: inline-block;
+}
+
+.form-bgs input {
+    margin: 0;
+    padding: 0;
+
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+.form-bgs input:checked + .form-bgs-card {
+    border: var(--form-bgs-card-border-width) solid var(--cara-red);
+}
+
+.form-bgs-card {
+    background-image: url("/static/img/green.png");
+    background-size: 150%;
+    background-repeat: no-repeat;
+
+    /* display: inline-block; */
+
+    cursor: pointer;
+
+    box-sizing: border-box;
+
+
+    width: var(--form-bgs-card-size);
+    height: var(--form-bgs-card-size);
+
+    border: var(--form-bgs-card-border-width) solid #fffcc0;
+
+    border-radius: 23px;
+
+    border-top-left-radius: 23px;
+
+    float: left;
+
+    margin-right: 2vw;
+    margin-bottom: 2vh;
+
+
+}
+
+.form-bgs-spacer {
+    width: 1vw;
+    height: var(--form-bgs-card-size);
+    display: inline-block;
+}
+
+/* form file */
+
+.form-file {
+    background: var(--cara-red);
+    width: var(--choose-file-button-width);
+
+    display: inline-block;
+
+    outline: none;
+    border: 0;
+    border-radius: 26px;
+
+    color: var(--yellow);
+
+    box-sizing: border-box;
+    padding: 2vh;
+
+    text-align: center;
+
+    font-family: "Roboto", sans-serif;
+
+    cursor: pointer;
+
+    margin-left: calc(calc(100% - var(--choose-file-button-width)) / 2);
+}
+
+.form-file-input {
+    display: none;
 }

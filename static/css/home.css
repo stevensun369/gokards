@@ -3,6 +3,9 @@
     --header-width: 70%;
 
     --cara-red: #990000;
+    --gray: rgba(221, 221, 221, 0.75);
+    --yellow: #fffcc0;
+
 }
 /* 
 @media only screen and (max-width: 800px) {
@@ -11,12 +14,12 @@
 } */
 
 body {
-    background: #fffcc0;
+    background: var(--yellow);
     font-family: "Roboto", sans-serif;
 }
 
 a {
-    color:  #fffcc0;
+    color: var(--yellow);
 }
 
 header {
@@ -102,7 +105,7 @@ section {
 }
 
 .kard {
-    background: rgba(221, 221, 221, 0.75);
+    background: var(--gray);
 
     width: 96%;
 
