@@ -1,5 +1,5 @@
 :root {
-    --form-bgs-card-border-width: 0.5vw;
+    --form-card-border-width: 0.5vw;
     --form-bgs-card-size: 20.75vw;
     --choose-file-button-width: 20%;
 
@@ -8,13 +8,15 @@
 @media only screen and (max-width: 600px) {
     :root {
         --form-bgs-card-size: 29vw;
+        --form-card-border-width: 1vw;
         --choose-file-button-width: 50%;
     }
 }
 
 .form {
     width: 100%;
-    height: 10vh;
+
+    display: inline-block;
 }
 
 .form-spacer {
@@ -81,7 +83,7 @@
 }
 
 .form-bgs input:checked + .form-bgs-card {
-    border: var(--form-bgs-card-border-width) solid var(--cara-red);
+    border: var(--form-card-border-width) solid var(--cara-red);
 }
 
 .form-bgs-card {
@@ -99,7 +101,7 @@
     width: var(--form-bgs-card-size);
     height: var(--form-bgs-card-size);
 
-    border: var(--form-bgs-card-border-width) solid #fffcc0;
+    border: var(--form-card-border-width) solid #fffcc0;
 
     border-radius: 23px;
 
@@ -119,7 +121,63 @@
     display: inline-block;
 }
 
+/* form orientation */
+.form-orientation {
+    width: 100%;
+    
+    box-sizing: border-box;
+    padding-left: 2%;
+
+    display: inline-block;
+}
+
+.form-orientation input {
+    margin: 0;
+    padding: 0;
+
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+.form-orientation-card {
+    background-size:100%;
+    background-repeat: no-repeat;
+
+    /* display: inline-block; */
+
+    cursor: pointer;
+
+    box-sizing: border-box;
+
+
+    width: var(--form-bgs-card-size);
+    height: var(--form-bgs-card-size);
+
+    border: var(--form-card-border-width) solid #fffcc0;
+
+    border-radius: 23px;
+
+    float: left;
+
+    margin-right: 2vw;
+    margin-bottom: 2vh;
+}
+
+.form-orientation input:checked + .form-orientation-card {
+    border: var(--form-card-border-width) solid var(--cara-red);
+}
+
+
 /* form file */
+
+.form-file-container {
+    width: 100%;
+    display: inline-block;
+
+    margin-bottom: 2vh;
+
+}
 
 .form-file {
     background: var(--cara-red);
@@ -148,3 +206,100 @@
 .form-file-input {
     display: none;
 }
+
+/* form message */
+.form-message {
+    width: 96%;
+    height: 8vh;
+
+    margin-left: 2%;
+
+    outline: none;
+    border: 0;
+
+    border-radius: 3.5vh;
+
+    background: var(--gray);
+
+    padding-left: 4vw;
+    box-sizing: border-box;
+
+    color: var(--cara-red);
+
+    font-size: 1.15em;
+}
+
+.form-message::placeholder {
+    color: var(--cara-red);
+}
+
+/* form color */
+.form-color {
+    width: 100%;
+
+    padding-left: 2%;
+    box-sizing: border-box;
+
+    display: inline-block;
+
+}
+
+.form-color input {
+    display: none;
+}
+
+.form-color-card {
+    /* display: inline-block; */
+
+    cursor: pointer;
+
+    box-sizing: border-box;
+
+    width: var(--form-bgs-card-size);
+    height: var(--form-bgs-card-size);
+
+    border: var(--form-card-border-width) solid #fffcc0;
+
+    border-radius: 23px;
+
+    float: left;
+
+    margin-right: 2vw;
+    margin-bottom: 1vh;
+
+    position: relative;
+
+    font-family: "Gingerbread", cursive;
+}
+
+.form-color-card-text {
+    position: absolute;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+
+    text-align: center;
+    font-size: 1.5em;
+}
+
+.form-color input:checked + .form-color-card {
+    border: var(--form-card-border-width) solid var(--cara-red);
+}
+
+/* form font */
+
+.form-font {
+    width: 100%;
+    height: 10vh;
+
+    display: inline-block;
+
+    box-sizing: border-box;
+    padding-left: 2vw;
+
+    background: green;
+}
+
+
+
+

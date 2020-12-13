@@ -1,0 +1,19 @@
+@font-face {
+    font-family: "Christmas on Crack";
+    src: url('/static/fonts/ChristmasOnCrack.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Grinched';
+    src: url('/static/fonts/GrinchedRegular.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Sanbsb';
+    src: url('/static/fonts/sanbsb.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Gingerbread';
+    src: url('/static/fonts/GingerbreadHouse.woff') format('woff');
+}
