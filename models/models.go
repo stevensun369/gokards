@@ -17,7 +17,7 @@ type User struct {
 
 // Kard is the model that deals with the transfer of cards
 type Kard struct {
-	ID int `gorm:"primariKey"`
+	ID int `gorm:"primaryKey"`
 	CreatedAt time.Time
 
 	KardID string `gorm:"index"`

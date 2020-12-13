@@ -12,4 +12,6 @@ func Routes(app *fiber.App) {
 	app.Get("/sent", getSent)
 
 	app.Get("/add", getAdd)
+	app.Post("/add", postAdd)
+
 }

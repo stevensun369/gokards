@@ -114,7 +114,7 @@ func postLogin(c *fiber.Ctx) error {
 		Expires: time.Now().Add(720 * time.Hour),
 	})
 
-	return c.Redirect("/test")
+	return c.Redirect("/")
 }
 
 // Logout handler

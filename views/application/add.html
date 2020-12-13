@@ -21,7 +21,7 @@
 
         <a href="/add">
             <div class="header-add-kard">
-                <img src="/static/img/add-kard-filled-white.png" alt="" class="header-add-kard-img">
+                <img src="/static/img/add-kard-filled-white.webp" alt="" class="header-add-kard-img">
             </div>
         </a>
 
@@ -33,8 +33,8 @@
 
 <section>
 
-    <form class="form" method="post">
-        <input type="text" name="to" class="form-to" placeholder="Destinatarul kard-ului...">
+    <form class="form" method="post" enctype="multipart/form-data">
+        <input type="text" name="to" class="form-to" placeholder="Destinatarul kard-ului..." required>
 
         <div class="form-spacer"></div>
 
@@ -42,7 +42,7 @@
 
         <div class="form-bgs">
 
-            <input type="radio" name="background" value="1" id="bg1">
+            <input type="radio" name="background" value="1" id="bg1" required>
             <label class="form-bgs-card" for="bg1" style="background-image: url('/static/img/model-repeat.jpg');"></label>
 
             <!-- <div class="form-bgs-spacer"></div> -->
@@ -58,54 +58,54 @@
 
         </div>
 
-        <div class="form-spacer"></div>
+        <!-- <div class="form-spacer"></div>
 
         <div class="indicator">Alegeti orientarea imaginii</div>
 
         <div class="form-orientation">
-            <input type="radio" name="orientation" value="p" id="portrait">
+            <input type="radio" name="orientation" value="p" id="portrait" required>
             <label class="form-orientation-card" for="portrait" style="background-image: url('/static/img/portrait-orientation.png')"></label>
 
             <input type="radio" name="orientation" value="l" id="landscape">
             <label class="form-orientation-card" for="landscape" style="background-image: url('/static/img/landscape-orientation.png')"></label>
-        </div>
+        </div> -->
 
-        <div class="form-spacer"></div>
+        <!-- <div class="form-spacer"></div> -->
 
         <div class="indicator">Alegeti o imagine pentru kard:</div>
         
         <div class="form-file-container">
-            <input type="file" id="image" class="form-file-input">
-            <label class="form-file" for="image">
+            <input type="file" id="image" name="image" class="form-file-input" required>
+            <!-- <label class="form-file" for="image">
                 Incarcati o imagine
-            </label>
+            </label> -->
         </div>
 
         <div class="indicator">Scrieti mesajul dorit:</div>
 
-        <input type="text" class="form-message" name="message" placeholder="Mesajul dorit...">
+        <input type="text" class="form-message" name="message" placeholder="Mesajul dorit..." required>
 
         <div class="form-spacer"></div>
 
         <div class="indicator">Alegeti culoare fontului mesajului:</div>
 
         <div class="form-color">
-            <input type="radio" name="font-color" id="color-red">
+            <input type="radio" name="font-color" id="color-red" value="red" required>
             <label class="form-color-card" for="color-red" style="color: var(--cara-red);">
                 <span class="form-color-card-text">Acesta este un exemplu.</span>
             </label>
 
-            <input type="radio" name="font-color" id="color-red2">
+            <input type="radio" name="font-color" id="color-red2" value="green">
             <label class="form-color-card" for="color-red2" style="color: green;">
                 <span class="form-color-card-text">Acesta este un exemplu.</span>
             </label>
 
-            <input type="radio" name="font-color" id="color-red3">
+            <input type="radio" name="font-color" id="color-red3" value="black">
             <label class="form-color-card" for="color-red3" style="color: black;">
                 <span class="form-color-card-text">Acesta este un exemplu.</span>
             </label>
 
-            <input type="radio" name="font-color" id="color-red4">
+            <input type="radio" name="font-color" id="color-red4" value="blue">
             <label class="form-color-card" for="color-red4" style="color:blue;">
                 <span class="form-color-card-text">Acesta este un exemplu.</span>
             </label>
@@ -116,8 +116,27 @@
         <div class="indicator">Alegeti fontul mesajului:</div>
 
         <div class="form-font">
-            
+            <input type="radio" name="font" id="font-mountains" value="mountains" require>
+            <label class="form-font-card" for="font-mountains" style="font-family: 'Mountains of Christmas', cursive;">
+                <span class="form-font-card-text">Acesta este un exemplu.</span>
+            </label>
+
+            <input type="radio" name="font" id="font-christmas-crack" value="christmas-crack">
+            <label class="form-font-card" for="font-christmas-crack" style="font-family: 'Christmas on Crack', cursive;">
+                <span class="form-font-card-text">Acesta este un exemplu.</span>
+            </label>
+
+            <input type="radio" name="font" id="font-sanbsb" value="sanbsb">
+            <label class="form-font-card" for="font-sanbsb" style="font-family: 'Sanbsb', cursive;">
+                <span class="form-font-card-text">Acesta este un exemplu.</span>
+            </label>
+
+
         </div>
+
+        <button type="submit" class="form-button-submit">
+            Trimite Felicitarea
+        </button>
 
     </form>
 
