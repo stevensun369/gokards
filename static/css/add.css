@@ -1,6 +1,6 @@
 :root {
     --form-card-border-width: 0.5vw;
-    --form-bgs-card-size: 20.75vw;
+    --form-card-size: 20.75vw;
     --choose-file-button-width: 20%;
 
     /* colors for the font-color form part */
@@ -9,7 +9,7 @@
 
 @media only screen and (max-width: 600px) {
     :root {
-        --form-bgs-card-size: 29vw;
+        --form-card-size: 29vw;
         --form-card-border-width: 1vw;
         --choose-file-button-width: 40%;
     }
@@ -89,7 +89,6 @@
 }
 
 .form-bgs-card {
-    background-image: url("/static/img/green.webp");
     background-size: 150%;
     background-repeat: no-repeat;
 
@@ -100,8 +99,8 @@
     box-sizing: border-box;
 
 
-    width: var(--form-bgs-card-size);
-    height: var(--form-bgs-card-size);
+    width: var(--form-card-size);
+    height: var(--form-card-size);
 
     border: var(--form-card-border-width) solid #fffcc0;
 
@@ -111,15 +110,18 @@
 
     float: left;
 
-    margin-right: 2vw;
-    margin-bottom: 2vh;
+    margin-right: 1.5vw;
+    margin-bottom: 1vh;
+
+    position: relative;
+
 
 
 }
 
 .form-bgs-spacer {
     width: 1vw;
-    height: var(--form-bgs-card-size);
+    height: var(--form-card-size);
     display: inline-block;
 }
 
@@ -153,8 +155,8 @@
     box-sizing: border-box;
 
 
-    width: var(--form-bgs-card-size);
-    height: var(--form-bgs-card-size);
+    width: var(--form-card-size);
+    height: var(--form-card-size);
 
     border: var(--form-card-border-width) solid #fffcc0;
 
@@ -258,8 +260,8 @@
 
     box-sizing: border-box;
 
-    width: var(--form-bgs-card-size);
-    height: var(--form-bgs-card-size);
+    width: var(--form-card-size);
+    height: var(--form-card-size);
 
     border: var(--form-card-border-width) solid #fffcc0;
 
@@ -283,6 +285,8 @@
 
     text-align: center;
     font-size: 1.5em;
+
+    width: 100%;
 }
 
 .form-color input:checked + .form-color-card {
@@ -314,8 +318,8 @@
 
     box-sizing: border-box;
 
-    width: var(--form-bgs-card-size);
-    height: var(--form-bgs-card-size);
+    width: var(--form-card-size);
+    height: var(--form-card-size);
 
     border: var(--form-card-border-width) solid #fffcc0;
 
@@ -341,6 +345,9 @@
 
     text-align: center;
     font-size: 1.5em;
+
+    width: 100%;
+
 }
 
 .form-font input:checked + .form-font-card {

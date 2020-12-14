@@ -11,7 +11,11 @@ func Routes(app *fiber.App) {
 
 	app.Get("/sent", getSent)
 
+	// add kard
 	app.Get("/add", getAdd)
 	app.Post("/add", postAdd)
+
+	// get kard
+	app.Get("/kard/:kardID", getKard)
 
 }

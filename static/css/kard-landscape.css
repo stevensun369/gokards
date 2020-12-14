@@ -1,0 +1,83 @@
+:root {
+    --kard-background-width: 80%;
+    --kard-image-width: 80%;
+    --kard-text-width: 50%;
+}
+
+@media only screen and (max-width: 600px) {
+    :root {
+        --kard-background-width: 96%;
+        --kard-image-width: 90%;
+        --kard-text-width: 80%;
+        --kard-text-font-size: 0.9em;
+    }
+}
+
+.kard-container {
+    width: 100%;
+    display: inline-block;
+
+    box-sizing: border-box;
+}
+
+.kard-background {
+
+    background-image: url('/static/img/1.webp');
+
+    background-repeat: repeat;
+    background-position: center;
+    background-size: 40%;
+
+    width: var(--kard-background-width);
+    height: auto;
+
+    margin-left: calc(calc(100% - var(--kard-background-width)) / 2);
+
+    display: inline-block;
+
+    border-radius: 26px;
+
+}
+
+.kard-image {
+    width: var(--kard-image-width);
+    height: auto;
+    border-radius: 26px; 
+    margin-left: calc(calc(100% - var(--kard-image-width)) / 2);
+    margin-top: 2vh;
+    margin-bottom: 2vh;
+}
+
+.kard-text {
+
+    background: rgba(255, 252, 192, 0.8);
+
+    width: var(--kard-text-width);
+    margin-left: calc(calc(100% - var(--kard-text-width)) / 2);
+
+    
+
+    box-sizing: border-box;
+    padding-top: 2vh;
+    padding-bottom: 2vh;
+
+    display: inline-block;
+
+    font-size: var(--kard-text-font-size);
+
+    position: relative;
+
+    margin-bottom: 2vh;
+
+    border-radius: 26px;
+}
+
+.kard-text-span {
+
+    width: 80%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+
+    text-align: center;
+}

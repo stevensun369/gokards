@@ -1,0 +1,121 @@
+:root {
+    --kard-background-width: 80%;
+    --kard-image-width: 35%;
+    --kard-text-width: 35%;
+    --kard-image-margin-left: 5vw;
+
+    --kard-text-container-margin-right: 2vh;
+
+    /* --kard-text-container-width:  */
+}
+
+@media only screen and (min-width: 600px) {
+    .kard-text-container {
+        position: absolute;
+        right: 5vw;
+        top: 50%;
+        -ms-transform: translateY(-50%);
+        transform: translateY(-50%);
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    :root {
+        --kard-background-width: 96%;
+        --kard-image-width: 90%;
+        --kard-text-width: 80%;
+        --kard-text-font-size: 0.9em;
+        --kard-image-margin-left: calc(calc(100% - var(--kard-image-width)) / 2);
+
+        /* --kard-text-container-width: 80%; */
+        --kard-text-container-margin-right: 10%;
+    }
+
+    .kard-text-container {
+        margin-right: var(--kard-text-container-margin-right);
+    }
+}
+
+.kard-container {
+    width: 100%;
+    display: inline-block;
+
+    box-sizing: border-box;
+}
+
+.kard-background {
+
+    background-image: url('/static/img/1.webp');
+
+    background-repeat: repeat;
+    background-position: center;
+    background-size: 40%;
+
+    width: var(--kard-background-width);
+    height: auto;
+
+    margin-left: calc(calc(100% - var(--kard-background-width)) / 2);
+
+    display: inline-block;
+
+    border-radius: 26px;
+
+    position: relative;
+
+}
+
+.kard-image {
+    width: var(--kard-image-width);
+    height: auto;
+    border-radius: 26px; 
+    margin-left: var(--kard-image-margin-left);
+    margin-top: 2vh;
+    margin-bottom: 2vh;
+
+    float: left;
+}
+
+.kard-text-container {
+
+    width: var(--kard-text-width);
+    float: right;
+
+
+}
+
+.kard-text {
+
+    background: rgba(255, 252, 192, 0.8);
+
+    /* width: var(--kard-text-width); */
+    /* margin-left: calc(calc(100% - var(--kard-text-width)) / 2); */
+
+    
+
+    box-sizing: border-box;
+    padding-top: 2vh;
+    padding-bottom: 2vh;
+
+    /* display: inline-block; */
+
+    font-size: var(--kard-text-font-size);
+
+    position: relative;
+
+    margin-bottom: 2vh;
+
+    border-radius: 26px;
+
+    /* margin-right: var(--kard-text-margin-right); */
+
+}
+
+.kard-text-span {
+
+    width: 80%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+
+    text-align: center;
+}

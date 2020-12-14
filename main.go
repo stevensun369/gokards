@@ -22,6 +22,8 @@ func main () {
 	})
 
 	app.Static("/static/", "./static")
+	app.Static("/media/", "./media")
+
 
 	// database initialization
 	database.InitDatabase()

@@ -86,6 +86,8 @@ func postAdd(c *fiber.Ctx) error {
 		orientation = "l"
 	} else if file.Height > file.Width {
 		orientation = "p"
+	} else if file.Height == file.Width {
+		orientation = "l";
 	}
 
 	// create the kard
@@ -104,4 +106,22 @@ func postAdd(c *fiber.Ctx) error {
 	db.Create(&kard)
 
 	return c.Redirect("/")
+}
+
+func getKard(c *fiber.Ctx) error {
+	kardID := c.Params("kardID")
+
+	prev := c.Query("prev")
+
+	db := database.DBConn
+	var kard models.Kard
+
+	db.Where("kard_id", kardID).First(&kard)
+
+	authUsersKard(c, kard)
+
+	return c.Render("application/kard", fiber.Map{
+		"kard": kard,
+		"prev": prev,
+	}, "layouts/main")
 }
