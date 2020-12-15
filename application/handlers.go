@@ -21,15 +21,29 @@ func getHome(c *fiber.Ctx) error {
 
 	authUser(c)
 
-	return c.Render("application/home", fiber.Map{}, "layouts/main")
+	db := database.DBConn
+	
+	var kards []models.Kard
+	db.Order("created_at desc").Where("to", c.Cookies("user_email")).Find(&kards)
+
+	return c.Render("application/home", fiber.Map{
+		"Title": "acasă",
+		"kards": kards,
+	}, "layouts/main")
 }
 
 func getSent(c *fiber.Ctx) error {
 
 	authUser(c)
 
+	db := database.DBConn
+	
+	var kards []models.Kard
+	db.Order("created_at desc").Where("from", c.Cookies("user_email")).Find(&kards)
+
 	return c.Render("application/sent", fiber.Map{
-		"Title": "sent kards",
+		"Title": "kard-urile trimise",
+		"kards": kards,
 	}, "layouts/main")
 }
 

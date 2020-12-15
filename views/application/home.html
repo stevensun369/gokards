@@ -32,14 +32,33 @@
 
 <section>
 
-    <div class="kard">
-        <div class="kard-from">
-            Nume Prenume
+    {% if kards %}
+
+        <div class="indicator">
+            Acestea sunt kard-urile primite de la alte persoane.
         </div>
 
-        <div class="kard-date">
-            00.00.0000
-        </div>
-    </div>
+        {% for kard in kards %}
+
+            <a href="/kard/{{ kard.KardID }}?prev=home">
+                <div class="kard">
+                    <div class="kard-from">
+                        De la: {{ kard.From }}
+                    </div>
+
+                    <div class="kard-date">
+                        {{ kard.CreatedAt.Day }}.{{ kard.CreatedAt.Month }}.{{ kard.CreatedAt.Year }}
+                    </div>
+                </div>
+            </a>
+
+        {% endfor %}
+
+    {% else %}
+
+        <p class="nothing">Nu aveti inca corespondenta.</p>
+
+    {% endif %}
+
 
 </section>
