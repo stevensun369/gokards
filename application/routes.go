@@ -7,7 +7,9 @@ import (
 // Routes will initialize the routes for the main application
 func Routes(app *fiber.App) {
 	app.Get("/home", getHome)
-	app.Get("", getHome)
+	app.Get("", func (c*fiber.Ctx) error {
+		return c.Redirect("/home")
+	})
 
 	app.Get("/sent", getSent)
 

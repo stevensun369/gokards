@@ -141,7 +141,7 @@ section {
 
     padding-top: 2.5vh;
     padding-bottom: 1vh;
-    padding-left: 4vw;
+    padding-left: 2vh;
 
     display: inline-block;
     box-sizing: border-box;
@@ -154,7 +154,7 @@ section {
 
     font-size: 2.25vh;
 
-    height: 4vh;
+    /* height: 4vh; */
     width: 100%;
 
     float: left;
@@ -164,6 +164,7 @@ section {
     font-weight: 850;
 
     color: var(--cara-red);
+    margin-bottom: 0.5vh;
 
     /* background: green; */
 }
@@ -189,6 +190,11 @@ section {
     font-family: "Roboto", sans-serif;
     font-weight: 850;
     font-size: 1.1em;
+
+    max-width: 80%;
+
+    margin-left: auto;
+    margin-right: auto;
 
     position: relative;
     top: 50%;

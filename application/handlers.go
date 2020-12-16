@@ -26,6 +26,8 @@ func getHome(c *fiber.Ctx) error {
 	var kards []models.Kard
 	db.Order("created_at desc").Where("to", c.Cookies("user_email")).Find(&kards)
 
+
+
 	return c.Render("application/home", fiber.Map{
 		"Title": "acasă",
 		"kards": kards,
@@ -59,6 +61,12 @@ func getAdd(c *fiber.Ctx) error {
 func postAdd(c *fiber.Ctx) error {
 
 	to := c.FormValue("to")
+	toSlice := strings.Split(to, " ")
+	to = ""
+	for _, s := range toSlice {
+		to += s
+	}
+
 	background := c.FormValue("background")
 	// orientation := c.FormValue("orientation")
 
@@ -104,11 +112,21 @@ func postAdd(c *fiber.Ctx) error {
 		orientation = "l";
 	}
 
+	// From name
+	var userFrom models.User
+	db.Select("nume", "prenume").Where("email", c.Cookies("user_email")).First(&userFrom)
+
+	// to name
+	var userTo models.User
+	db.Select("nume", "prenume").Where("email", to).First(&userTo)
+
 	// create the kard
 	kard := models.Kard{
 		KardID: kardID,
+		FromName: userFrom.Nume + " " + userFrom.Prenume,
 		From: c.Cookies("user_email"),
 		To: to,
+		ToName: userTo.Nume + " " + userTo.Prenume,
 		Background: background,
 		Orientation: orientation,
 		Image: fileLink,
@@ -128,9 +146,14 @@ func getKard(c *fiber.Ctx) error {
 	prev := c.Query("prev")
 
 	db := database.DBConn
-	var kard models.Kard
 
-	db.Where("kard_id", kardID).First(&kard)
+	// kard model
+	var kard models.Kard
+	kardQuery := db.Where("kard_id", kardID).First(&kard)
+
+	if kardQuery.Error != nil {
+		return c.Render("application/kard-problem", fiber.Map{}, "layouts/main")
+	}
 
 	authUsersKard(c, kard)
 

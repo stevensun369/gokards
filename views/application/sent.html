@@ -43,7 +43,7 @@
             <a href="/kard/{{ kard.KardID }}?prev=sent">
                 <div class="kard">
                     <div class="kard-from">
-                        Catre: {{ kard.To }}
+                        Catre: {{ kard.ToName }} ({{ kard.To }})
                     </div>
 
                     <div class="kard-date">
@@ -56,7 +56,7 @@
 
     {% else %}
 
-        <p class="nothing">Nu aveti inca corespondenta.</p>
+        <p class="nothing">Nu ati trimis inca nici un kard.</p>
 
     {% endif %}
 

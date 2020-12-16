@@ -10,6 +10,11 @@ import (
 	"strconv"
 )
 
+// type ZipKardUser {
+// 	kard models.Kard
+// 	user models.User
+// }
+
 func authUser(c *fiber.Ctx) {
 	userEmail := c.Cookies("user_email")
 

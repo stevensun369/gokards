@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="/static/css/kard-portrait.css">
 {% endif %}
 
+<link rel="stylesheet" href="/static/css/kards-common.css"> 
  
 
 <header>
@@ -51,6 +52,20 @@
                     </span>
                 </div>
             </div>
+        </div>
+    </div>
+
+    <div class="kard-info">
+        <div class="kard-info-line">
+            De la: {{ kard.FromName }} ({{ kard.From }})
+        </div>
+
+        <div class="kard-info-line">
+            Catre: {{ kard.ToName }} ({{ kard.To }})
+        </div>
+
+        <div class="kard-info-line" style="font-weight: 500;">
+            Data: {{ kard.CreatedAt.Day }}.{{ kard.CreatedAt.Month }}.{{ kard.CreatedAt.Year }}
         </div>
     </div>
 

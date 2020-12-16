@@ -21,8 +21,10 @@ type Kard struct {
 	CreatedAt time.Time
 
 	KardID string `gorm:"index"`
+	FromName string 
 	From string `gorm:"index"`
 	To string `gorm:"index"`
+	ToName string
 
 	Background string
 

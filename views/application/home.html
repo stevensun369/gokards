@@ -31,7 +31,7 @@
 <div class="space"></div>
 
 <section>
-
+ 
     {% if kards %}
 
         <div class="indicator">
@@ -43,7 +43,7 @@
             <a href="/kard/{{ kard.KardID }}?prev=home">
                 <div class="kard">
                     <div class="kard-from">
-                        De la: {{ kard.From }}
+                        De la: {{ kard.FromName }} ({{ kard.From }})
                     </div>
 
                     <div class="kard-date">

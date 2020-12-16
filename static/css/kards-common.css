@@ -1,0 +1,33 @@
+section {
+    height: auto;
+    display: inline-block;
+
+    padding-bottom: 0;
+}
+
+.kard-info {
+    width: var(--kard-background-width);
+    height: auto;
+
+    padding-top: 2vh;
+    padding-bottom: 2vh;
+    padding-left: 3vh;
+
+    box-sizing: border-box;
+
+    margin-left: calc(calc(100% - var(--kard-background-width)) / 2);
+
+    margin-top: 2vh;
+    margin-bottom: 1.5vh;
+
+    background: var(--gray);
+
+    border-radius: 26px;
+}
+
+.kard-info-line {
+    color: var(--cara-red);
+    font-weight: 850;
+    font-family: "Roboto", sans-serif;
+    margin-bottom: 0.5vh;
+}
