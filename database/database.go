@@ -2,6 +2,7 @@ package database
 
 import (
 	"github.com/stevensun369/kards/models"
+	"github.com/stevensun369/kards/conf"
 
 	"gorm.io/gorm"
 	"gorm.io/driver/postgres"
@@ -17,9 +18,8 @@ var (
 // InitDatabase initialises the database
 func InitDatabase() {
 	var err error
-	dsn := "user=postgres password=StevenS369@postgres dbname=kards_dev port=5432 sslmode=disable TimeZone=Europe/Bucharest"
 
-	DBConn, err = gorm.Open(postgres.Open(dsn), &gorm.Config{})
+	DBConn, err = gorm.Open(postgres.Open(conf.DSN), &gorm.Config{})
 
 	if err != nil {
 		log.Println("The connection to the database failed")
