@@ -67,7 +67,20 @@ func postRegister(c *fiber.Ctx) error {
 	user.Password = string(hashedPassword);
 	db.Save(&user)
 
-	return c.Redirect("/auth/login")
+	c.Cookie(&fiber.Cookie{
+		Name: "user_id",
+		Value: strconv.Itoa(user.ID),
+		Expires: time.Now().Add(720 * time.Hour),
+	})
+
+	c.Cookie(&fiber.Cookie{
+		Name: "user_email",
+		Value: user.Email,
+		Expires: time.Now().Add(720 * time.Hour),
+	})
+
+
+	return c.Redirect("/help")
 }
 
 // Login handlers

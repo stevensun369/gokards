@@ -30,7 +30,6 @@ func InitDatabase() {
 		&models.User{},
 		&models.Kard{},
 	)
-
+		
 	log.Println("AutoMigrated the models")
-
 }

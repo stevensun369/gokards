@@ -201,3 +201,26 @@ section {
     -ms-transform: translateY(-50%);
     transform: translateY(-50%);
 }
+
+/* to help */
+.to-help {
+    width: 7vh;
+    height: 7vh;
+
+    box-sizing: border-box;
+
+    position: fixed;
+    bottom: 2vh;
+    right: 2vh;
+
+    border: 0.5vh solid var(--cara-red);
+    border-radius: 300px;
+}
+
+.to-help-img {
+    width: 3vh;
+    height: 3vh;
+
+    margin-left: 1.5vh;
+    margin-top: 1.5vh;
+}

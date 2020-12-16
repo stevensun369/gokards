@@ -70,7 +70,6 @@ func postAdd(c *fiber.Ctx) error {
 	background := c.FormValue("background")
 	// orientation := c.FormValue("orientation")
 
-
 	message := c.FormValue("message")
 	fontColor := c.FormValue("font-color")
 	font := c.FormValue("font")
@@ -114,7 +113,7 @@ func postAdd(c *fiber.Ctx) error {
 
 	// From name
 	var userFrom models.User
-	db.Select("nume", "prenume").Where("email", c.Cookies("user_email")).First(&userFrom)
+	db.Select("nume", "prenume").Where("id", c.Cookies("id")).First(&userFrom)
 
 	// to name
 	var userTo models.User
@@ -161,4 +160,20 @@ func getKard(c *fiber.Ctx) error {
 		"kard": kard,
 		"prev": prev,
 	}, "layouts/main")
+}
+
+func getHelp(c *fiber.Ctx) error {
+
+	authUser(c)
+
+	db := database.DBConn
+
+	var user models.User
+	db.First(&user, c.Cookies("user_id"))
+
+	user.DidHelp = true
+
+	db.Save(&user)
+
+	return c.Render("application/help", fiber.Map{}, "layouts/main")
 }

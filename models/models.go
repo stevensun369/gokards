@@ -13,6 +13,8 @@ type User struct {
 	Prenume string
 	Email string
 	Password string
+
+	DidHelp bool
 }
 
 // Kard is the model that deals with the transfer of cards
@@ -35,5 +37,4 @@ type Kard struct {
 	Message string
 	Font string
 	Color string
-
 }
