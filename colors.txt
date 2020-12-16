@@ -1,0 +1,6 @@
+kard-red : #990000
+kard-green: #3C8D0D
+kard-gold: #FABC02
+kard-silver: #9c9c9c
+kard-black: #000000
+kard-blue: #2B71AB

@@ -1,23 +1,53 @@
 @font-face {
-    font-family: "Christmas on Crack";
-    src: url('/static/fonts/ChristmasOnCrack.woff') format('woff');
+    font-family: "Allura";
+    src: url('/static/fonts/Allura.woff') format('woff');
     font-display: fallback;
 }
 
 @font-face {
-    font-family: 'Grinched';
-    src: url('/static/fonts/GrinchedRegular.woff') format('woff');
+    font-family: 'Caveat';
+    src: url('/static/fonts/Caveat.woff') format('woff');
     font-display: fallback;
 }
 
 @font-face {
-    font-family: 'Sanbsb';
-    src: url('/static/fonts/sanbsb.woff') format('woff');
+    font-family: 'Choko';
+    src: url('/static/fonts/Choko.woff') format('woff');
     font-display: fallback;
 }
 
 @font-face {
-    font-family: 'Gingerbread';
-    src: url('/static/fonts/GingerbreadHouse.woff') format('woff');
+    font-family: 'CursiveSans';
+    src: url('/static/fonts/CursiveSans.woff') format('woff');
+    font-display: fallback;
+}
+
+@font-face {
+    font-family: 'Deftone';
+    src: url('/static/fonts/Deftone.woff') format('woff');
+    font-display: fallback;
+}
+
+@font-face {
+    font-family: 'Foglihten';
+    src: url('/static/fonts/Foglihten.woff') format('woff');
+    font-display: fallback;
+}
+
+@font-face {
+    font-family: 'LearningCurve';
+    src: url('/static/fonts/LearningCurve.woff') format('woff');
+    font-display: fallback;
+}
+
+@font-face {
+    font-family: 'Pecita';
+    src: url('/static/fonts/Pecita.woff') format('woff');
+    font-display: fallback;
+}
+
+@font-face {
+    font-family: 'Xiomara';
+    src: url('/static/fonts/Xiomara.woff') format('woff');
     font-display: fallback;
 }

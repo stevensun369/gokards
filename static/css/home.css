@@ -6,6 +6,14 @@
     --gray: rgba(221, 221, 221, 0.75);
     --yellow: #fffcc0;
 
+    /* kard colors */
+    --kard-red: #990000;
+    --kard-green: #3c8d0d;
+    --kard-gold: #fabc02;
+    --kard-silver: #9c9c9c;
+    --kard-blue: #2b71ab;
+    --kard-black: #000000;
+
 }
 /* 
 @media only screen and (max-width: 800px) {

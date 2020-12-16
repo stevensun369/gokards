@@ -113,7 +113,7 @@ func postAdd(c *fiber.Ctx) error {
 
 	// From name
 	var userFrom models.User
-	db.Select("nume", "prenume").Where("id", c.Cookies("id")).First(&userFrom)
+	db.Select("nume", "prenume").Where("id", c.Cookies("user_id")).First(&userFrom)
 
 	// to name
 	var userTo models.User
