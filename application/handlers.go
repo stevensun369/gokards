@@ -15,6 +15,8 @@ import (
 	// other appss
 	"github.com/stevensun369/kards/database"
 	"github.com/stevensun369/kards/models"
+
+	"github.com/stevensun369/kards/conf"
 )
 
 func getHome(c *fiber.Ctx) error {
@@ -94,8 +96,8 @@ func postAdd(c *fiber.Ctx) error {
 	imageUpload, _ := c.FormFile("image")
 	fileExtensionSlice := strings.Split(imageUpload.Filename, ".")
 	fileExtension := fileExtensionSlice[len(fileExtensionSlice) - 1]
-	filePath := fmt.Sprintf("./media/%s", kardID) + "." + fileExtension
-	fileLink := fmt.Sprintf("/media/%s", kardID) + "." + fileExtension
+	filePath := fmt.Sprintf(conf.MediaFolder + "/%s", kardID) + "." + fileExtension
+	fileLink := fmt.Sprintf(conf.MediaFolder + "/%s", kardID) + "." + fileExtension
 
 	c.SaveFile(imageUpload, filePath)
 	

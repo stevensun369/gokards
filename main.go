@@ -6,6 +6,9 @@ import (
 
 	"github.com/stevensun369/kards/database"
 
+	"github.com/stevensun369/kards/conf"
+
+
 	// routes
 	"github.com/stevensun369/kards/auth"
 	"github.com/stevensun369/kards/application"
@@ -15,14 +18,14 @@ import (
 
 func main () {
 
-	engine := django.New("./views", ".html")
+	engine := django.New(conf.ViewsFolder, ".html")
 
 	app := fiber.New(fiber.Config{
 		Views: engine,
 	})
 
-	app.Static("/static/", "./static")
-	app.Static("/media/", "./media")
+	app.Static("/static/", conf.StaticFolder)
+	app.Static("/media/", conf.MediaFolder)
 
 
 	// database initialization
@@ -33,5 +36,4 @@ func main () {
 	application.Routes(app)
 
 	app.Listen(":3000")
-
 }
